@@ -4,6 +4,7 @@ import Products from './components/Products';
 import Message from './components/Message';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
+import ProductsContainer from './containers/ProductsContainer';
 
 export default function App() {
 	return (
@@ -11,11 +12,8 @@ export default function App() {
 			<Header/>
 			<main id="mainContainer">
 				<div className="container">
-
-					<Products/>
-
+					<ProductsContainer/>
 					<Message/>
-
 					<Cart/>
 				</div>
 			</main>
