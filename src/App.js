@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import Products from './components/Products';
-import Message from './components/Message';
-import Cart from './components/Cart';
-import Footer from './components/Footer';
+// import Products from './components/Products';
+// import Cart from './components/Cart';
 import ProductsContainer from './containers/ProductsContainer';
 import CartContainer from './containers/CartContainer';
+import MessageContainer from './containers/MessageContainer';
+import Footer from './components/Footer';
 
 export default function App() {
 	return (
@@ -14,11 +14,10 @@ export default function App() {
 			<main id="mainContainer">
 				<div className="container">
 					<ProductsContainer/>
-					<Message/>
+					<MessageContainer/>
 					<CartContainer/>
 				</div>
 			</main>
-
 			<Footer/>
 		</div>
 	)
