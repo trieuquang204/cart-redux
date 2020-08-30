@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Cart from '../components/Cart';
 import * as Message from '../constants/Message';
 import CartItem from '../components/CartItem';
+import CartResult from '../components/CartResult'; 
 
 class CartContainer extends Component {
 	render() {
@@ -12,7 +13,8 @@ class CartContainer extends Component {
 		return (
 			<div>
 				<Cart>
-					{this.showCartItem(cart)}
+					{ this.showCartItem(cart) }
+					{ this.showTotalAmount(cart) }
 				</Cart>
 			</div>
 		)
@@ -34,9 +36,15 @@ class CartContainer extends Component {
 		return result
 	}
 
+	showTotalAmount = (cart) => {
+		var result = null;
+		if(cart.length > 0) {
+			result = <CartResult cart={ cart } />
+		}
+		return result;
+	}
+
 }
-
-
 
 CartContainer.propTypes = {
 	cart: PropTypes.arrayOf(PropTypes.shape({

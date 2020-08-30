@@ -13,6 +13,18 @@ var initialState =[
             rating: 4
         },
         quantity : 5
+    },
+    {
+        product: {
+            id: 2,
+            name: 'Iphone4',
+            image:'https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/H/H0/HH0H2/HH0H2?wid=445&hei=445&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=K7ik72',
+            description: 'San pham do apple san xuat',
+            price: 200,
+            inventory: 3,
+            rating: 2
+        },
+        quantity : 2
     }
 ]
 
