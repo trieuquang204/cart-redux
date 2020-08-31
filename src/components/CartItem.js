@@ -31,14 +31,25 @@ class CartItem extends Component {
 				</td>
 				<td>{this.showSubTotal(item.product.price, item.quantity)}$</td>
 				<td>
-					<button type="button" className="btn btn-sm btn-primary waves-effect waves-light" data-toggle="tooltip" data-placement="top"
-						title="" data-original-title="Remove item">
+					<button
+						onClick={() => this.onDelete(item.product)}
+						type="button"
+						className="btn btn-sm btn-primary waves-effect waves-light"
+						data-toggle="tooltip" data-placement="top"
+						title=""
+						data-original-title="Remove item">
 						X
-										</button>
+					</button>
 				</td>
 			</tr>
 		)
 	}
+
+	onDelete(product) {
+		var { onDeleteProductInCart } = this.props;
+		onDeleteProductInCart(product);
+	}
+
 	showSubTotal = (price, quantity) => {
 		return price * quantity;
 	}
